@@ -2,7 +2,6 @@
     "name": "nlp-tools/lang-detect",
     "description": "Classify source code using a Naive Bayes text classifier",
     "require": {
-        "nlp-tools/nlp-tools": "dev-develop"
     },
     "license": "WTFPL",
     "authors": [
