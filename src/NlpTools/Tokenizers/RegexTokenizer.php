@@ -95,7 +95,7 @@ class RegexTokenizer implements TokenizerInterface
      *
      * @param string $str The string to be tokenized
      */
-    protected function replace(array &$str, $pattern, $replacement)
+    protected function replace(array &string $str, $pattern, $replacement)
     {
         foreach ($str as &$s) {
             $s = preg_replace($pattern, $replacement, $s);

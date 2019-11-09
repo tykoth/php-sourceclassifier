@@ -18,7 +18,7 @@ abstract class VowelsAbstractFactory
      * @return \NlpTools\Utils\VowelAbstractFactory
      * @throws \Exception 
      */
-    static public function factory($language = 'English')
+    static public function factory(string $language = 'English')
     {
         $className = "\\".__NAMESPACE__."\\{$language}Vowels";
         if(class_exists($className)) { 

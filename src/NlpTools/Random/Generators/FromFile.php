@@ -15,7 +15,7 @@ class FromFile implements GeneratorInterface
      * Construct a FromFile generator
      * @param string $f A file name to read from
      */
-    public function __construct($f)
+    public function __construct(string $f)
     {
         $this->h = fopen($f,'r');
     }

@@ -48,7 +48,7 @@ class ExternalMaxentOptimizer implements MaxentOptimizerInterface
     /**
      * @param string $optimizer The path for an external optimizer executable
      */
-    public function __construct($optimizer)
+    public function __construct(string $optimizer)
     {
         $this->optimizer = $optimizer;
     }

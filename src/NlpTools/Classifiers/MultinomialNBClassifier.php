@@ -58,7 +58,7 @@ class MultinomialNBClassifier implements ClassifierInterface
      * @param DocumentInterface The document whose score we are getting
      * @return float The log of the probability of $d belonging to $class
      */
-    public function getScore($class, DocumentInterface $d)
+    public function getScore(string $class, DocumentInterface $d)
     {
         $score = log($this->model->getPrior($class));
         $features = $this->feature_factory->getFeatureArray($class,$d);

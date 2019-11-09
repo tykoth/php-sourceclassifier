@@ -14,7 +14,7 @@ class EnglishVowels extends VowelsAbstractFactory
      * @param int $index the index in the string to inspect
      * @return boolean True letter at the provided index is a vowel 
      */
-    public function isVowel($word, $index)
+    public function isVowel(string $word, int $index)
     {
         if(strpbrk($word[$index], 'aeiou') !== false) {
             return true;

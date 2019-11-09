@@ -78,7 +78,7 @@ class LancasterStemmer extends Stemmer
      * @param string $word The word that gets stemmed
      * @return string The stemmed word
      */
-    public function stem($word)
+    public function stem(string $word)
     {
         $this->originalToken = $word;
         
@@ -132,7 +132,7 @@ class LancasterStemmer extends Stemmer
      * @param string $word word the rule is being applied on
      * @param array $rule An associative array containing all the data elements for applying to the word
      */
-    protected function applyRule($word, $rule)
+    protected function applyRule(string $word, $rule)
     {
         return substr_replace($word, $rule[self::APPEND_STRING], strlen($word) - $rule[self::REMOVE_TOTAL]);        
     }
@@ -143,7 +143,7 @@ class LancasterStemmer extends Stemmer
      * @param int $removeTotal The number of characters to remove from the suffix
      * @return boolean True is the word is acceptable
      */
-    protected function isAcceptable($word, $removeTotal)
+    protected function isAcceptable(string $word, int $removeTotal)
     {
         $length =  strlen($word) - $removeTotal;
         if($this->vowelChecker->isVowel($word, 0)&& $length >= 2){

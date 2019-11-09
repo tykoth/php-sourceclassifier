@@ -35,7 +35,7 @@ class PennTreeBankTokenizer extends WhitespaceTokenizer
      * Handles the data processing
      * @param string $string The raw text to get parsed
      */
-    protected function execute($string)
+    protected function execute(string $string)
     {
         foreach ($this->patternsAndReplacements as $patternAndReplacement) {
             $tmp = preg_replace("/".$patternAndReplacement->pattern."/s", $patternAndReplacement->replacement, $string);
@@ -96,7 +96,7 @@ class PennTreeBankTokenizer extends WhitespaceTokenizer
      * @param string $pattern
      * @param string $replacement
      */
-    protected function addPatternAndReplacement($pattern, $replacement)
+    protected function addPatternAndReplacement(string $pattern, string $replacement)
     {
         $instance = new \stdClass();
         $instance->pattern = $pattern;
