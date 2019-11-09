@@ -80,9 +80,10 @@ class FeatureBasedNB implements MultinomialNBModelInterface
                             );
 
         $voccount = count($train_ctx['voc']);
+        $training_set = $tset->getClassSet();
 
         $this->computeProbabilitiesFromCounts(
-                                    $tset->getClassSet(),
+                                    $training_set,
                                     $train_ctx['termcount_per_class'],
                                     $train_ctx['termcount'],
                                     $train_ctx['ndocs_per_class'],
